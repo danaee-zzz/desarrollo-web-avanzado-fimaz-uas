@@ -20,7 +20,7 @@ class Usuario {
         if (filter_var($correo, FILTER_VALIDATE_EMAIL)) {
             $this->correo = $correo;
         } else {
-            echo "La dirección de correo '$correo' no es válida.";
+            throw new Exception("Correo electrónico no válido");
         }
     }
 }
