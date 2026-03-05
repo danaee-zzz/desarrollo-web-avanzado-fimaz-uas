@@ -3,8 +3,9 @@ class Usuario {
     private $nombre;
     private $correo;
 
-    function __construct() {
-        
+    function __construct($nombre,  $correo) {
+        $this->nombre= $nombre;
+        $this->validarCorreo($correo);
     }
 
     function getNombre() {
@@ -16,7 +17,7 @@ class Usuario {
     function setNombre($nombre) {
         $this->nombre = $nombre;
     }
-    function setCorreo($correo) {
+    function validarCorreo($correo) {
         if (filter_var($correo, FILTER_VALIDATE_EMAIL)) {
             $this->correo = $correo;
         } else {
