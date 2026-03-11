@@ -1,6 +1,6 @@
 <?php
-include 'Admin.php';
-include 'Alumno.php';
+include 'clases/Admin.php';
+include 'clases/Alumno.php';
 
 try {
 
