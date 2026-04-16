@@ -3,7 +3,7 @@
     $host = "localhost";
     $db = "escuela";
     $user = "root";
-    $pass = "851951";
+    $pass = "";
     $charset = "utf8mb4";
 
     $dsn = "mysql:host=$host;dbname=$db;charset=$charset";
