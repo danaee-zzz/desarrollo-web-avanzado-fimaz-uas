@@ -45,7 +45,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 
-$producto = $controller->listar();
+$productos = $controller->listar();
 ?>
 
 <!DOCTYPE html>
