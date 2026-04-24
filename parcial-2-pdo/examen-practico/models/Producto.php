@@ -1,3 +1,4 @@
+/*Danna Paola Lizarraga Hernandez */
 <?php
 class Producto {
     private $id;

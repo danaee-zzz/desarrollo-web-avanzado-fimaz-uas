@@ -1,3 +1,4 @@
+/*Danna Paola Lizarraga Hernandez */
 <?php
 class Database {
     private $host = "localhost";

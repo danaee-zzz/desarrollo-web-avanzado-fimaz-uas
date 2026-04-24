@@ -1,3 +1,4 @@
+/*Danna Paola Lizarraga Hernandez */
 <?php
 require_once __DIR__ . "/../config/Database.php";
 require_once __DIR__ . "/../models/Producto.php";

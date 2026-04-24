@@ -1,3 +1,4 @@
+/*Danna Paola Lizarraga Hernandez */
 <?php
 require_once 'controllers/ProductoController.php';
 $controller = new ProductoController();
