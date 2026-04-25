@@ -57,5 +57,13 @@ class ProductoController {
 
         return $stmt->execute();
     }
+    public function buscar($termino) {
+        $sql = "SELECT  * FROM productos WHERE nombre LIKE :termino ORDER BY id DESC";
+        $stmt = $this->connection->prepare($sql);
+        $stmt->bindValue(':termino', '%' . $termino . '%');
+        $stmt->execute();
+
+        return $stmt->fetchAll();
+    }
 }
 ?>
