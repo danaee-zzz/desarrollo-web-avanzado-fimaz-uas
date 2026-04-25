@@ -1,5 +1,5 @@
 <?php
-/*Danna Paola Lizarraga Hernandez */
+//Danna Paola Lizarraga Hernandez 
 class Database {
     private $host = "localhost";
     private $dbname = "examen practico";

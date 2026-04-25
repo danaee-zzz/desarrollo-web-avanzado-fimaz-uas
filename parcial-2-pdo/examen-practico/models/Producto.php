@@ -1,5 +1,5 @@
-/*Danna Paola Lizarraga Hernandez */
 <?php
+/*Danna Paola Lizarraga Hernandez */
 class Producto {
     private $id;
     private $nombre;
