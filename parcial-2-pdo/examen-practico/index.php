@@ -1,4 +1,5 @@
 <?php
+//Danna Paola Lizarraga Hernandez
 require_once 'controllers/ProductoController.php';
 $controller = new ProductoController();
 $mensaje = "";
