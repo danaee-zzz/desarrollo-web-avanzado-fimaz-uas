@@ -162,3 +162,11 @@ $productos = $controller->listar();
 </body>
 
 </html>
+<?php
+require_once 'controllers/ProductoController.php';
+
+$controller = new ProductoController();
+$mensaje = "";
+$productoEditar = null;
+$terminoBusqueda = isset($_GET['buscar']) ? trim($_GET['buscar']) : '';
+?>
