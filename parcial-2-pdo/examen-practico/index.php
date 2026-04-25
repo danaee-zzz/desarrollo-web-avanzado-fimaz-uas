@@ -1,9 +1,11 @@
-/*Danna Paola Lizarraga Hernandez */
 <?php
 require_once 'controllers/ProductoController.php';
 $controller = new ProductoController();
 $mensaje = "";
 $productoEditar = null;
+$terminoBusqueda = isset($_GET['buscar']) ? trim($_GET['buscar']) : '';
+
+// print_r($terminoBusqueda);
 
 if (isset($_GET['eliminar'])) {
     $idEliminar = $_GET['eliminar'];
@@ -46,12 +48,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     }
 }
 if ($terminoBusqueda !==  '') {
+    print_r('entra');
     $productos =  $controller->buscar($terminoBusqueda);
 } else {
     $productos = $controller->listar();
 }
 
-$productos = $controller->listar();
 ?>
 
 <!DOCTYPE html>
@@ -185,11 +187,3 @@ $productos = $controller->listar();
 </body>
 
 </html>
-<?php
-require_once 'controllers/ProductoController.php';
-
-$controller = new ProductoController();
-$mensaje = "";
-$productoEditar = null;
-$terminoBusqueda = isset($_GET['buscar']) ? trim($_GET['buscar']) : '';
-?>
