@@ -45,6 +45,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 }
+if ($terminoBusqueda !==  '') {
+    $productos =  $controller->buscar($terminoBusqueda);
+} else {
+    $productos = $controller->listar();
+}
 
 $productos = $controller->listar();
 ?>
@@ -117,6 +122,24 @@ $productos = $controller->listar();
         <div class="card">
             <div class="card-header bg-dark text-white">
                 Lista de productos
+            </div>
+            <div class="card-body">
+                <form method="GET" action="" class="row g-2 mb-3">
+                    <div class="col-md-10">
+                        <input type="text" name="buscar" class="form-control"
+                        placeholder="Buscar por nombre o descripcion"
+                        value="<?php echo htmlspecialchars($terminoBusqueda); ?>">
+                    </div>
+                    <div class="col-md-2 d-grid">
+                        <button type="submit" class="btn btn-primary">Buscar</button>
+                    </div>
+                    <?php if ($terminoBusqueda !== ''): ?>
+                        <div class="col-12">
+                            <a href="index.php" class="btn btn-secondary btn-sm">Mostrar todos</a>
+                        </div>
+                    <?php endif; ?>
+                </form>
+                <table class="table table-bordered table-striped table-hover"></table>
             </div>
             <div class="card-body">
                 <table class="table table-bordered table-striped table-hover">
