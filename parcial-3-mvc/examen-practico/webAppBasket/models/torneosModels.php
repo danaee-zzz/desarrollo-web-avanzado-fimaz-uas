@@ -9,12 +9,12 @@ class torneosModel {
     }
 
     public function insert($nombreTorneo, $organizador, $patrocinadores, $sede, $categoria, $premio1, $premio2, $premio3,
-        $usuario,  $contrasena) {
+        $usuario, $otroPremio, $contrasena) {
 
         
         $contrasena = $this->passwordEncrypt($contrasena);
         $statement = $this->PDO->prepare("INSERT INTO torneos VALUES(null, :nombreTorneo, :organizador, :patrocinadores,
-                :sede, :categoria, :premio1, :premio2, :premio3, :usuario, :contrasena)");
+                :sede, :categoria, :premio1, :premio2, :premio3, :otroPremio, :usuario,  :contrasena)");
 
         $statement->bindParam(":nombreTorneo", $nombreTorneo);
         $statement->bindParam(":organizador", $organizador);
@@ -24,6 +24,7 @@ class torneosModel {
         $statement->bindParam(":premio1", $premio1);
         $statement->bindParam(":premio2", $premio2);
         $statement->bindParam(":premio3", $premio3);
+        $statement->bindParam(":otroPremio", $otroPremio);       
         $statement->bindParam(":usuario", $usuario);
         $statement->bindParam(":contrasena", $contrasena);
 
