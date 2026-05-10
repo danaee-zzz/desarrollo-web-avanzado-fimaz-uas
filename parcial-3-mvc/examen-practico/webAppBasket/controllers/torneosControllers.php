@@ -63,5 +63,8 @@ class torneosControllers
             ? header("Location: ./readOneTorneos.php?id=$id")
             : header("Location: ./readAllTorneos.php");
     }
+    public function delete($id) {
+        return ($this->model->delete($id)) ? header("Location: readAllTorneos.php"): header("Location: readOneTorneo.php?id=".$id); 
+    }
 }
 ?>
