@@ -63,6 +63,11 @@ class torneosModel {
         $statement = $this->PDO->prepare("SELECT * FROM torneos");
          return ($statement->execute()) ? $statement->fetchAll() : false;
     }
+    public function readOne($id) {
+        $statement = $this->PDO->prepare("SELECT * FROM torneos WHERE id= :id limit 1");
+        $statement->bindParam(":id",$id);
+        return ($statement->execute()) ? $statement->fetch(): false;
+    }
 }
 
 ?>
