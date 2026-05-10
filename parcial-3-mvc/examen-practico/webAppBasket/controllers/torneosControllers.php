@@ -1,5 +1,5 @@
 <?php
-    require_once("../models/torneosModels.php");
+    require_once(__DIR__ . "/../models/torneosModels.php");
     class torneosControllers {
         private $model;
         public function __construct() {
@@ -9,7 +9,8 @@
             $premio3, $otroPremio, $usuario, $contrasena) {
         $id = $this->model->insert($nombreTorneo, $organizador, $patrocinadores, $sede, $categoria, $premio1, $premio2,
             $premio3, $otroPremio, $usuario, $contrasena );
-        return ($id!=false) ? header("Location: mainTorneos.php") : header("Location: frmTorneos.php");
+            
+        return ($id!=false) ? header("Location: admin.php") : header("Location: frmTorneos.php");
 
         }
     }

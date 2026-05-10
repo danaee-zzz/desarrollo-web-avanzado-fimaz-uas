@@ -1,5 +1,5 @@
 <?php
-require_once("../config/DataBase.php");
+require_once(__DIR__ . "/../config/DataBase.php");
 class torneosModel {
     public $PDO;
     public function __construct() {
@@ -9,7 +9,7 @@ class torneosModel {
     }
 
     public function insert($nombreTorneo, $organizador, $patrocinadores, $sede, $categoria, $premio1, $premio2, $premio3,
-        $usuario, $otroPremio, $contrasena) {
+        $otroPremio, $usuario, $contrasena) {
 
         
         $contrasena = $this->passwordEncrypt($contrasena);

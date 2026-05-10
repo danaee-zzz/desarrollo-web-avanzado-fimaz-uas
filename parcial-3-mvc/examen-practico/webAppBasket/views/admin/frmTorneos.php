@@ -8,7 +8,7 @@
         CAPTURA LA INFORMACION DEL TORNEO.
     </div>
     <div class="card-body">
-        <form action="post" method="post">
+        <form action="torneosInsert.php" method="post">
             <div class="mb-3">
                 <label for="nombreTorneo" class="form-label">NOMBRE DEL TORNEO</label>
                 <input type="text" class="form-control" name="txtNombreTorneo" id="nombreTorneo">
@@ -75,6 +75,10 @@
                     <label for="contrasena" class="form-label">CONTRASEÑA</label>
                     <input type="text" name="txtContrasena" id="contrasena" class="form-control">
                 </div>
+            </div>
+            <div class="col mb'3">
+                <button type="submit" class="btn btn-primary">Guardar</button>
+                <a href="admin.php" class="btn btn-danger">Cancelar</a>
             </div>
         </form>
     </div>
