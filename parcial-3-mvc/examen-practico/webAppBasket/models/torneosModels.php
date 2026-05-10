@@ -68,6 +68,26 @@ class torneosModel {
         $statement->bindParam(":id",$id);
         return ($statement->execute()) ? $statement->fetch(): false;
     }
+    //Metodo para actualizar
+    public function update($id, $nombreTorneo, $organizador, $patrocinadores, $sede, $categoria, $premio1, $premio2, $premio3,
+        $otroPremio) {
+        $statement = $this->PDO->prepare("UPDATE torneos SET nombreTorneo = :nombreTorneo, organizador = :organizador, patrocinadores = :patrocinadores,
+        sede = :sede, categoria = :categoria, premio1 = :premio1, premio2 = :premio2, premio3 = :premio3, otroPremio = :otroPremio
+        WHERE ID = :id");
+        $statement->bindParam(":id", $id);
+        $statement->bindParam(":nombreTorneo", $nombreTorneo);
+        $statement->bindParam(":organizador", $organizador);
+        $statement->bindParam(":patrocinadores", $patrocinadores);
+        $statement->bindParam(":sede", $sede);
+        $statement->bindParam(":categoria", $categoria);
+        $statement->bindParam(":premio1", $premio1);
+        $statement->bindParam(":premio2", $premio2);
+        $statement->bindParam(":premio3", $premio3);
+        $statement->bindParam(":otroPremio", $otroPremio);       
+
+        return ($statement->execute()) ? $id : false;
+
+    }
 }
 
 ?>
