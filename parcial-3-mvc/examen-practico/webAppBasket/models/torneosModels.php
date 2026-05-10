@@ -58,6 +58,11 @@ class torneosModel {
             ? true
             : false;
     }
+    //listar torneos
+    public function read() {
+        $statement = $this->PDO->prepare("SELECT * FROM torneos");
+         return ($statement->execute()) ? $statement->fetchAll() : false;
+    }
 }
 
 ?>

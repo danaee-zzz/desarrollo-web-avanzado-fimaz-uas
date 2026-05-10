@@ -28,7 +28,9 @@
                         LISTA DE TORNEOS
                     </div>
                     <div class="card-body">
-
+                    <a href="readAllTorneos.php" class="btn btn primary">
+                        <img src="../img/gatito2.jpg" alt="listar torneo." width="180" height="180">
+                    </a>
                     </div>
                 </div>
             </div>
