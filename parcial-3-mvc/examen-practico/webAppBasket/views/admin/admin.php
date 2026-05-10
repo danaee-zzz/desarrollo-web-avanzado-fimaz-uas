@@ -1,6 +1,9 @@
 <?php
     require_once("../admin/template/header.php");
 ?>
+<div class="mx-auto p-5">
+
+
 <div class="card text-center">
   <div class="card-header">
     MENÚ
@@ -63,7 +66,7 @@
     Configuracion de torneos. Web App Basket-Ball.
   </div>
 </div>
-
+</div>
 <?php
     require_once("../admin/template/footer.php");
 ?>
